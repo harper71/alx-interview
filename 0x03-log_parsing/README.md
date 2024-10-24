@@ -1,0 +1,2 @@
+
+For log parsing, the goal is typically to analyze logs and extract useful information like request counts, status codes, or errors. Here's an example Python script that reads log entries from stdin, computes metrics, and prints out the results.
