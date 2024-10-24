@@ -20,6 +20,7 @@ total_size = 0
 # Counter to track the number of lines
 line_count = 0
 
+
 def print_metrics():
     """Print the computed metrics: total size and status code counts."""
     print(f"File size: {total_size}")
@@ -27,10 +28,12 @@ def print_metrics():
         if status_code_count[code] > 0:
             print(f"{code}: {status_code_count[code]}")
 
+
 def signal_handler(sig, frame):
     """Handle the keyboard interrupt (CTRL + C) and print metrics."""
     print_metrics()
     sys.exit(0)
+
 
 # Set up signal handler for CTRL + C
 signal.signal(signal.SIGINT, signal_handler)
@@ -43,8 +46,6 @@ try:
         if len(parts) < 7:
             # Skip if line doesn't have enough parts
             continue
-
-
         # Extract file size and status code
         try:
             file_size = int(parts[-1])
