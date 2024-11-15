@@ -34,7 +34,7 @@ def solve_nqueens(N):
             if can_place(queens, row, col):
                 queens[row] = col
                 place_queen(queens, row + 1)
-    
+
     solutions = []
     queens = [-1] * N
     place_queen(queens, 0)
