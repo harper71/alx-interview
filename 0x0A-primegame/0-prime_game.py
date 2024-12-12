@@ -3,6 +3,17 @@
 
 
 def isWinner(x, nums):
+    """
+    Determines the winner of the prime game after x rounds.
+
+    Args:
+        x (int): Number of rounds.
+        nums (list): Array of n for each round.
+
+    Returns:
+        str: Name of the player with the most wins ("Maria" or "Ben").
+             Returns None if the winner cannot be determined.
+    """
 
     def sieve(max_n):
         """Precomputes the number of primes up to every
